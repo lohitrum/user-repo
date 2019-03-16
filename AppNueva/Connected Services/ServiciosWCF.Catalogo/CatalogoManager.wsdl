@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CatalogoManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ICatalogoService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alpaca-studio.net/web/catalogo/metadata?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alpaca-studio.net/web/catalogo/metadata?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alpaca-studio.net/web/catalogo/metadata?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Web.Catalogo.Contracts" />
+      <xsd:import schemaLocation="http://alpaca-studio.net/web/catalogo/metadata?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" />
+      <xsd:import schemaLocation="http://alpaca-studio.net/web/catalogo/metadata?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICatalogoService_Obtener_Categorias_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Categorias" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Obtener_Categorias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CategoriasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Obtener_ArticulosPorCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_ArticulosPorCategoria" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Obtener_ArticulosPorCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_ArticulosPorCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Obtener_ColoresPorArticulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_ColoresPorArticulo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Obtener_ColoresPorArticulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_ColoresPorArticuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Obtener_IdsArticulosExistentesPorIdCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_IdsArticulosExistentesPorIdCategoria" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Obtener_IdsArticulosExistentesPorIdCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_IdsArticulosExistentesPorIdCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Obtener_IdsArticulosExistentes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_IdsArticulosExistentes" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Obtener_IdsArticulosExistentes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_IdsArticulosExistentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Obtener_IdsColoresPorArticulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_IdsColoresPorArticulo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Obtener_IdsColoresPorArticulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_IdsColoresPorArticuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Nuevo_Articulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nuevo_Articulo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Nuevo_Articulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Nuevo_ArticuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Nuevo_Color_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nuevo_Color" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Nuevo_Color_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Nuevo_ColorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Eliminar_Articulos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_Articulos" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Eliminar_Articulos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_ArticulosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Eliminar_Colores_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_Colores" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Eliminar_Colores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_ColoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Iniciar_Sesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Iniciar_Sesion" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogoService_Iniciar_Sesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Iniciar_SesionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICatalogoService">
+    <wsdl:operation name="Obtener_Categorias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogoService/Obtener_Categorias" message="tns:ICatalogoService_Obtener_Categorias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogoService/Obtener_CategoriasResponse" message="tns:ICatalogoService_Obtener_Categorias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_ArticulosPorCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogoService/Obtener_ArticulosPorCategoria" message="tns:ICatalogoService_Obtener_ArticulosPorCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogoService/Obtener_ArticulosPorCategoriaResponse" message="tns:ICatalogoService_Obtener_ArticulosPorCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_ColoresPorArticulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogoService/Obtener_ColoresPorArticulo" message="tns:ICatalogoService_Obtener_ColoresPorArticulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogoService/Obtener_ColoresPorArticuloResponse" message="tns:ICatalogoService_Obtener_ColoresPorArticulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_IdsArticulosExistentesPorIdCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogoService/Obtener_IdsArticulosExistentesPorIdCategoria" message="tns:ICatalogoService_Obtener_IdsArticulosExistentesPorIdCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogoService/Obtener_IdsArticulosExistentesPorIdCategoriaResponse" message="tns:ICatalogoService_Obtener_IdsArticulosExistentesPorIdCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_IdsArticulosExistentes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogoService/Obtener_IdsArticulosExistentes" message="tns:ICatalogoService_Obtener_IdsArticulosExistentes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogoService/Obtener_IdsArticulosExistentesResponse" message="tns:ICatalogoService_Obtener_IdsArticulosExistentes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_IdsColoresPorArticulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogoService/Obtener_IdsColoresPorArticulo" message="tns:ICatalogoService_Obtener_IdsColoresPorArticulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogoService/Obtener_IdsColoresPorArticuloResponse" message="tns:ICatalogoService_Obtener_IdsColoresPorArticulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Nuevo_Articulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogoService/Nuevo_Articulo" message="tns:ICatalogoService_Nuevo_Articulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogoService/Nuevo_ArticuloResponse" message="tns:ICatalogoService_Nuevo_Articulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Nuevo_Color">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogoService/Nuevo_Color" message="tns:ICatalogoService_Nuevo_Color_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogoService/Nuevo_ColorResponse" message="tns:ICatalogoService_Nuevo_Color_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_Articulos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogoService/Eliminar_Articulos" message="tns:ICatalogoService_Eliminar_Articulos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogoService/Eliminar_ArticulosResponse" message="tns:ICatalogoService_Eliminar_Articulos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_Colores">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogoService/Eliminar_Colores" message="tns:ICatalogoService_Eliminar_Colores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogoService/Eliminar_ColoresResponse" message="tns:ICatalogoService_Eliminar_Colores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Iniciar_Sesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogoService/Iniciar_Sesion" message="tns:ICatalogoService_Iniciar_Sesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogoService/Iniciar_SesionResponse" message="tns:ICatalogoService_Iniciar_Sesion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ICatalogoService" type="tns:ICatalogoService">
+    <wsp:PolicyReference URI="#NetTcpBinding_ICatalogoService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="Obtener_Categorias">
+      <soap12:operation soapAction="http://tempuri.org/ICatalogoService/Obtener_Categorias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_ArticulosPorCategoria">
+      <soap12:operation soapAction="http://tempuri.org/ICatalogoService/Obtener_ArticulosPorCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_ColoresPorArticulo">
+      <soap12:operation soapAction="http://tempuri.org/ICatalogoService/Obtener_ColoresPorArticulo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_IdsArticulosExistentesPorIdCategoria">
+      <soap12:operation soapAction="http://tempuri.org/ICatalogoService/Obtener_IdsArticulosExistentesPorIdCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_IdsArticulosExistentes">
+      <soap12:operation soapAction="http://tempuri.org/ICatalogoService/Obtener_IdsArticulosExistentes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_IdsColoresPorArticulo">
+      <soap12:operation soapAction="http://tempuri.org/ICatalogoService/Obtener_IdsColoresPorArticulo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nuevo_Articulo">
+      <soap12:operation soapAction="http://tempuri.org/ICatalogoService/Nuevo_Articulo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nuevo_Color">
+      <soap12:operation soapAction="http://tempuri.org/ICatalogoService/Nuevo_Color" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_Articulos">
+      <soap12:operation soapAction="http://tempuri.org/ICatalogoService/Eliminar_Articulos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_Colores">
+      <soap12:operation soapAction="http://tempuri.org/ICatalogoService/Eliminar_Colores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Iniciar_Sesion">
+      <soap12:operation soapAction="http://tempuri.org/ICatalogoService/Iniciar_Sesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CatalogoManager">
+    <wsdl:port name="NetTcpBinding_ICatalogoService" binding="tns:NetTcpBinding_ICatalogoService">
+      <soap12:address location="net.tcp://alpaca-studio.net/web/catalogo" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://alpaca-studio.net/web/catalogo</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>NUBIAN\sebas</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

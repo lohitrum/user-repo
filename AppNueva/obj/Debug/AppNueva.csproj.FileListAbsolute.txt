@@ -1,0 +1,67 @@
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\csc.exe
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\csc.exe.config
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\csc.rsp
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\csi.exe
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\csi.rsp
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\Microsoft.CSharp.Core.targets
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\System.AppContext.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\System.Collections.Immutable.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\System.Diagnostics.StackTrace.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\System.IO.FileSystem.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\System.IO.FileSystem.Primitives.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\System.Reflection.Metadata.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\vbc.exe
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\vbc.exe.config
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\vbc.rsp
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\VBCSCompiler.exe
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\roslyn\VBCSCompiler.exe.config
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\AppNueva.dll.config
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\AppNueva.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\AppNueva.pdb
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\obj\Debug\AppNueva.dll
+\\dc1.illary.com\documentos\dmendoza\documents\visual studio 2017\Projects\AppNueva\AppNueva\obj\Debug\AppNueva.pdb
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\csc.exe
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\csc.exe.config
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\csc.rsp
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\csi.exe
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\csi.rsp
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\System.AppContext.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\System.Collections.Immutable.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\System.IO.FileSystem.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\System.Reflection.Metadata.dll
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\vbc.exe
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\vbc.exe.config
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\vbc.rsp
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\VBCSCompiler.exe
+C:\Proyectos\AppNueva\AppNueva\bin\roslyn\VBCSCompiler.exe.config
+C:\Proyectos\AppNueva\AppNueva\bin\AppNueva.dll.config
+C:\Proyectos\AppNueva\AppNueva\bin\AppNueva.dll
+C:\Proyectos\AppNueva\AppNueva\bin\AppNueva.pdb
+C:\Proyectos\AppNueva\AppNueva\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Proyectos\AppNueva\AppNueva\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Proyectos\AppNueva\AppNueva\obj\Debug\AppNueva.csprojResolveAssemblyReference.cache
+C:\Proyectos\AppNueva\AppNueva\obj\Debug\AppNueva.dll
+C:\Proyectos\AppNueva\AppNueva\obj\Debug\AppNueva.pdb

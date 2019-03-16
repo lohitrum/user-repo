@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AlmHiladosManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IAlmHiladosService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256>
+                </sp:Basic256>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict>
+                </sp:Strict>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAlmHiladosService_Obtener_Almacenes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Almacenes" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_Almacenes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_AlmacenesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_AlmHilado_InputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_AlmHilado" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_AlmHilado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_AlmHiladoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_AlmHilados_InputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_AlmHilados" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_AlmHilados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_AlmHiladosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_MezclasInventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MezclasInventario" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_MezclasInventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MezclasInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_TitulosInventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_TitulosInventario" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_TitulosInventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_TitulosInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_ColoresInventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_ColoresInventario" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_ColoresInventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_ColoresInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_Inventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_Inventario" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_Inventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_InventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_Inventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Inventario" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_Inventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_InventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_Detalle_GrupoInventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Detalle_GrupoInventario" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_Detalle_GrupoInventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Detalle_GrupoInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_InventarioPorPartidaHilado_InputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_InventarioPorPartidaHilado" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_InventarioPorPartidaHilado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_InventarioPorPartidaHiladoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Actualizar_Detalle_GrupoInventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_Detalle_GrupoInventario" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Actualizar_Detalle_GrupoInventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_Detalle_GrupoInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_AlmHiladoGrupo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_AlmHiladoGrupo" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_AlmHiladoGrupo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_AlmHiladoGrupoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_AlmHiladoGrupos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_AlmHiladoGrupos" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_AlmHiladoGrupos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_AlmHiladoGruposResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_GruposActivos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_GruposActivos" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_GruposActivos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_GruposActivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_GrupoPorDefecto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_GrupoPorDefecto" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_GrupoPorDefecto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_GrupoPorDefectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_GruposActivosPorNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_GruposActivosPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_GruposActivosPorNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_GruposActivosPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_GruposInactivosPorNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_GruposInactivosPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_GruposInactivosPorNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_GruposInactivosPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_AlmHiladoMovimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_AlmHiladoMovimiento" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_AlmHiladoMovimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_AlmHiladoMovimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_AlmHiladoMovimientos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_AlmHiladoMovimientos" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_AlmHiladoMovimientos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_AlmHiladoMovimientosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_NroMovimientosEnMes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_NroMovimientosEnMes" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_NroMovimientosEnMes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_NroMovimientosEnMesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_MovimientosPorDiasEnMes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MovimientosPorDiasEnMes" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_MovimientosPorDiasEnMes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MovimientosPorDiasEnMesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_MovimientosSinRegistrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MovimientosSinRegistrar" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_MovimientosSinRegistrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MovimientosSinRegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_Movimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_Movimiento" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_Movimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_MovimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Nuevo_Movimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nuevo_Movimiento" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Nuevo_Movimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Nuevo_MovimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Registrar_Movimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_Movimiento" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Registrar_Movimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_MovimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Registrar_MovimientoSalidaRapida_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_MovimientoSalidaRapida" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Registrar_MovimientoSalidaRapida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_MovimientoSalidaRapidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_Item_Movimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_Item_Movimiento" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_Item_Movimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_Item_MovimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_Items_Movimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_Items_Movimiento" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_Items_Movimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_Items_MovimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_Detalles_MovimientoPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Detalles_MovimientoPorId" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Obtener_Detalles_MovimientoPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Detalles_MovimientoPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_PartidaHilado_InputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_PartidaHilado" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_PartidaHilado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_PartidaHiladoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_PartidasHilados_InputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_PartidasHilados" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Persistir_PartidasHilados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Persistir_PartidasHiladosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_PartidasHiladosPorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_PartidasHiladosPorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_PartidasHiladosPorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_PartidasHiladosPorCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_PartidaHilado_InputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_PartidaHilado" />
+  </wsdl:message>
+  <wsdl:message name="IAlmHiladosService_Buscar_PartidaHilado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Buscar_PartidaHiladoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAlmHiladosService">
+    <wsdl:operation name="Obtener_Almacenes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_Almacenes" message="tns:IAlmHiladosService_Obtener_Almacenes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_AlmacenesResponse" message="tns:IAlmHiladosService_Obtener_Almacenes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_AlmHilado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_AlmHilado" message="tns:IAlmHiladosService_Persistir_AlmHilado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladoResponse" message="tns:IAlmHiladosService_Persistir_AlmHilado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_AlmHilados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_AlmHilados" message="tns:IAlmHiladosService_Persistir_AlmHilados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladosResponse" message="tns:IAlmHiladosService_Persistir_AlmHilados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_MezclasInventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_MezclasInventario" message="tns:IAlmHiladosService_Obtener_MezclasInventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_MezclasInventarioResponse" message="tns:IAlmHiladosService_Obtener_MezclasInventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_TitulosInventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_TitulosInventario" message="tns:IAlmHiladosService_Obtener_TitulosInventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_TitulosInventarioResponse" message="tns:IAlmHiladosService_Obtener_TitulosInventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_ColoresInventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_ColoresInventario" message="tns:IAlmHiladosService_Buscar_ColoresInventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_ColoresInventarioResponse" message="tns:IAlmHiladosService_Buscar_ColoresInventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_Inventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_Inventario" message="tns:IAlmHiladosService_Buscar_Inventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_InventarioResponse" message="tns:IAlmHiladosService_Buscar_Inventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Inventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_Inventario" message="tns:IAlmHiladosService_Obtener_Inventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_InventarioResponse" message="tns:IAlmHiladosService_Obtener_Inventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Detalle_GrupoInventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_Detalle_GrupoInventario" message="tns:IAlmHiladosService_Obtener_Detalle_GrupoInventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_Detalle_GrupoInventarioResponse" message="tns:IAlmHiladosService_Obtener_Detalle_GrupoInventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_InventarioPorPartidaHilado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_InventarioPorPartidaHilado" message="tns:IAlmHiladosService_Buscar_InventarioPorPartidaHilado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_InventarioPorPartidaHiladoResponse" message="tns:IAlmHiladosService_Buscar_InventarioPorPartidaHilado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_Detalle_GrupoInventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Actualizar_Detalle_GrupoInventario" message="tns:IAlmHiladosService_Actualizar_Detalle_GrupoInventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Actualizar_Detalle_GrupoInventarioResponse" message="tns:IAlmHiladosService_Actualizar_Detalle_GrupoInventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_AlmHiladoGrupo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladoGrupo" message="tns:IAlmHiladosService_Persistir_AlmHiladoGrupo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladoGrupoResponse" message="tns:IAlmHiladosService_Persistir_AlmHiladoGrupo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_AlmHiladoGrupos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladoGrupos" message="tns:IAlmHiladosService_Persistir_AlmHiladoGrupos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladoGruposResponse" message="tns:IAlmHiladosService_Persistir_AlmHiladoGrupos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_GruposActivos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_GruposActivos" message="tns:IAlmHiladosService_Obtener_GruposActivos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_GruposActivosResponse" message="tns:IAlmHiladosService_Obtener_GruposActivos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_GrupoPorDefecto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_GrupoPorDefecto" message="tns:IAlmHiladosService_Obtener_GrupoPorDefecto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_GrupoPorDefectoResponse" message="tns:IAlmHiladosService_Obtener_GrupoPorDefecto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_GruposActivosPorNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_GruposActivosPorNombre" message="tns:IAlmHiladosService_Buscar_GruposActivosPorNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_GruposActivosPorNombreResponse" message="tns:IAlmHiladosService_Buscar_GruposActivosPorNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_GruposInactivosPorNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_GruposInactivosPorNombre" message="tns:IAlmHiladosService_Buscar_GruposInactivosPorNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_GruposInactivosPorNombreResponse" message="tns:IAlmHiladosService_Buscar_GruposInactivosPorNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_AlmHiladoMovimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladoMovimiento" message="tns:IAlmHiladosService_Persistir_AlmHiladoMovimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladoMovimientoResponse" message="tns:IAlmHiladosService_Persistir_AlmHiladoMovimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_AlmHiladoMovimientos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladoMovimientos" message="tns:IAlmHiladosService_Persistir_AlmHiladoMovimientos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladoMovimientosResponse" message="tns:IAlmHiladosService_Persistir_AlmHiladoMovimientos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_NroMovimientosEnMes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_NroMovimientosEnMes" message="tns:IAlmHiladosService_Obtener_NroMovimientosEnMes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_NroMovimientosEnMesResponse" message="tns:IAlmHiladosService_Obtener_NroMovimientosEnMes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_MovimientosPorDiasEnMes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_MovimientosPorDiasEnMes" message="tns:IAlmHiladosService_Obtener_MovimientosPorDiasEnMes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_MovimientosPorDiasEnMesResponse" message="tns:IAlmHiladosService_Obtener_MovimientosPorDiasEnMes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_MovimientosSinRegistrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_MovimientosSinRegistrar" message="tns:IAlmHiladosService_Obtener_MovimientosSinRegistrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_MovimientosSinRegistrarResponse" message="tns:IAlmHiladosService_Obtener_MovimientosSinRegistrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_Movimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_Movimiento" message="tns:IAlmHiladosService_Buscar_Movimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_MovimientoResponse" message="tns:IAlmHiladosService_Buscar_Movimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Nuevo_Movimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Nuevo_Movimiento" message="tns:IAlmHiladosService_Nuevo_Movimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Nuevo_MovimientoResponse" message="tns:IAlmHiladosService_Nuevo_Movimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_Movimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Registrar_Movimiento" message="tns:IAlmHiladosService_Registrar_Movimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Registrar_MovimientoResponse" message="tns:IAlmHiladosService_Registrar_Movimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_MovimientoSalidaRapida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Registrar_MovimientoSalidaRapida" message="tns:IAlmHiladosService_Registrar_MovimientoSalidaRapida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Registrar_MovimientoSalidaRapidaResponse" message="tns:IAlmHiladosService_Registrar_MovimientoSalidaRapida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_Item_Movimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_Item_Movimiento" message="tns:IAlmHiladosService_Persistir_Item_Movimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_Item_MovimientoResponse" message="tns:IAlmHiladosService_Persistir_Item_Movimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_Items_Movimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_Items_Movimiento" message="tns:IAlmHiladosService_Persistir_Items_Movimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_Items_MovimientoResponse" message="tns:IAlmHiladosService_Persistir_Items_Movimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Detalles_MovimientoPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_Detalles_MovimientoPorId" message="tns:IAlmHiladosService_Obtener_Detalles_MovimientoPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Obtener_Detalles_MovimientoPorIdResponse" message="tns:IAlmHiladosService_Obtener_Detalles_MovimientoPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_PartidaHilado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_PartidaHilado" message="tns:IAlmHiladosService_Persistir_PartidaHilado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_PartidaHiladoResponse" message="tns:IAlmHiladosService_Persistir_PartidaHilado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_PartidasHilados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_PartidasHilados" message="tns:IAlmHiladosService_Persistir_PartidasHilados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Persistir_PartidasHiladosResponse" message="tns:IAlmHiladosService_Persistir_PartidasHilados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_PartidasHiladosPorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_PartidasHiladosPorCodigo" message="tns:IAlmHiladosService_Buscar_PartidasHiladosPorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_PartidasHiladosPorCodigoResponse" message="tns:IAlmHiladosService_Buscar_PartidasHiladosPorCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_PartidaHilado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_PartidaHilado" message="tns:IAlmHiladosService_Buscar_PartidaHilado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlmHiladosService/Buscar_PartidaHiladoResponse" message="tns:IAlmHiladosService_Buscar_PartidaHilado_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IAlmHiladosService" type="tns:IAlmHiladosService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IAlmHiladosService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="Obtener_Almacenes">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Obtener_Almacenes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_AlmHilado">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Persistir_AlmHilado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_AlmHilados">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Persistir_AlmHilados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_MezclasInventario">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Obtener_MezclasInventario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_TitulosInventario">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Obtener_TitulosInventario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_ColoresInventario">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Buscar_ColoresInventario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_Inventario">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Buscar_Inventario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Inventario">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Obtener_Inventario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Detalle_GrupoInventario">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Obtener_Detalle_GrupoInventario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_InventarioPorPartidaHilado">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Buscar_InventarioPorPartidaHilado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_Detalle_GrupoInventario">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Actualizar_Detalle_GrupoInventario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_AlmHiladoGrupo">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladoGrupo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_AlmHiladoGrupos">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladoGrupos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_GruposActivos">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Obtener_GruposActivos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_GrupoPorDefecto">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Obtener_GrupoPorDefecto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_GruposActivosPorNombre">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Buscar_GruposActivosPorNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_GruposInactivosPorNombre">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Buscar_GruposInactivosPorNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_AlmHiladoMovimiento">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladoMovimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_AlmHiladoMovimientos">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Persistir_AlmHiladoMovimientos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_NroMovimientosEnMes">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Obtener_NroMovimientosEnMes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_MovimientosPorDiasEnMes">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Obtener_MovimientosPorDiasEnMes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_MovimientosSinRegistrar">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Obtener_MovimientosSinRegistrar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_Movimiento">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Buscar_Movimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nuevo_Movimiento">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Nuevo_Movimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_Movimiento">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Registrar_Movimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_MovimientoSalidaRapida">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Registrar_MovimientoSalidaRapida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_Item_Movimiento">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Persistir_Item_Movimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_Items_Movimiento">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Persistir_Items_Movimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Detalles_MovimientoPorId">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Obtener_Detalles_MovimientoPorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_PartidaHilado">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Persistir_PartidaHilado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Persistir_PartidasHilados">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Persistir_PartidasHilados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_PartidasHiladosPorCodigo">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Buscar_PartidasHiladosPorCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buscar_PartidaHilado">
+      <soap12:operation soapAction="http://tempuri.org/IAlmHiladosService/Buscar_PartidaHilado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AlmHiladosManager">
+    <wsdl:port name="NetTcpBinding_IAlmHiladosService" binding="tns:NetTcpBinding_IAlmHiladosService">
+      <soap12:address location="net.tcp://alpaca-studio.illary.com/nubian/AlmacenesHilados" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://alpaca-studio.illary.com/nubian/AlmacenesHilados</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/DC1.illary.com</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MensajesWebManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IMensajesWebService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alpaca-studio.net/web/mensajes/metadata?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alpaca-studio.net/web/mensajes/metadata?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alpaca-studio.net/web/mensajes/metadata?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Web.Mensajes.Contracts" />
+      <xsd:import schemaLocation="http://alpaca-studio.net/web/mensajes/metadata?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" />
+      <xsd:import schemaLocation="http://alpaca-studio.net/web/mensajes/metadata?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMensajesWebService_Obtener_MensajesWeb_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MensajesWeb" />
+  </wsdl:message>
+  <wsdl:message name="IMensajesWebService_Obtener_MensajesWeb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MensajesWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMensajesWebService_Obtener_NroMensajesWebExistentes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_NroMensajesWebExistentes" />
+  </wsdl:message>
+  <wsdl:message name="IMensajesWebService_Obtener_NroMensajesWebExistentes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_NroMensajesWebExistentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMensajesWebService_Nuevo_MensajeWeb_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nuevo_MensajeWeb" />
+  </wsdl:message>
+  <wsdl:message name="IMensajesWebService_Nuevo_MensajeWeb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Nuevo_MensajeWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMensajesWebService_Eliminar_MensajesWeb_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_MensajesWeb" />
+  </wsdl:message>
+  <wsdl:message name="IMensajesWebService_Eliminar_MensajesWeb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_MensajesWebResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMensajesWebService">
+    <wsdl:operation name="Obtener_MensajesWeb">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMensajesWebService/Obtener_MensajesWeb" message="tns:IMensajesWebService_Obtener_MensajesWeb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMensajesWebService/Obtener_MensajesWebResponse" message="tns:IMensajesWebService_Obtener_MensajesWeb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_NroMensajesWebExistentes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMensajesWebService/Obtener_NroMensajesWebExistentes" message="tns:IMensajesWebService_Obtener_NroMensajesWebExistentes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMensajesWebService/Obtener_NroMensajesWebExistentesResponse" message="tns:IMensajesWebService_Obtener_NroMensajesWebExistentes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Nuevo_MensajeWeb">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMensajesWebService/Nuevo_MensajeWeb" message="tns:IMensajesWebService_Nuevo_MensajeWeb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMensajesWebService/Nuevo_MensajeWebResponse" message="tns:IMensajesWebService_Nuevo_MensajeWeb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_MensajesWeb">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMensajesWebService/Eliminar_MensajesWeb" message="tns:IMensajesWebService_Eliminar_MensajesWeb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMensajesWebService/Eliminar_MensajesWebResponse" message="tns:IMensajesWebService_Eliminar_MensajesWeb_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IMensajesWebService" type="tns:IMensajesWebService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IMensajesWebService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="Obtener_MensajesWeb">
+      <soap12:operation soapAction="http://tempuri.org/IMensajesWebService/Obtener_MensajesWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_NroMensajesWebExistentes">
+      <soap12:operation soapAction="http://tempuri.org/IMensajesWebService/Obtener_NroMensajesWebExistentes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nuevo_MensajeWeb">
+      <soap12:operation soapAction="http://tempuri.org/IMensajesWebService/Nuevo_MensajeWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_MensajesWeb">
+      <soap12:operation soapAction="http://tempuri.org/IMensajesWebService/Eliminar_MensajesWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MensajesWebManager">
+    <wsdl:port name="NetTcpBinding_IMensajesWebService" binding="tns:NetTcpBinding_IMensajesWebService">
+      <soap12:address location="net.tcp://alpaca-studio.net/web/mensajes" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://alpaca-studio.net/web/mensajes</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>NUBIAN\sebas</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

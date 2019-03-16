@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Web.Catalogo.Contracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Web.Catalogo.Contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://alpaca-studio.net/web/catalogo/metadata?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" />
+  <xs:complexType name="ArrayOfArticuloCategoriaCatalogoWebData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArticuloCategoriaCatalogoWebData" nillable="true" type="tns:ArticuloCategoriaCatalogoWebData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticuloCategoriaCatalogoWebData" nillable="true" type="tns:ArrayOfArticuloCategoriaCatalogoWebData" />
+  <xs:complexType name="ArticuloCategoriaCatalogoWebData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q1:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UrlImagen" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ArticuloCategoriaCatalogoWebData" nillable="true" type="tns:ArticuloCategoriaCatalogoWebData" />
+  <xs:complexType name="ArrayOfArticuloCatalogoWebData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArticuloCatalogoWebData" nillable="true" type="tns:ArticuloCatalogoWebData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticuloCatalogoWebData" nillable="true" type="tns:ArrayOfArticuloCatalogoWebData" />
+  <xs:complexType name="ArticuloCatalogoWebData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q2:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Borde" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoCompleto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaModificacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Medidas" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Mezcla" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pelo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Peso" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UrlImagen" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ArticuloCatalogoWebData" nillable="true" type="tns:ArticuloCatalogoWebData" />
+  <xs:complexType name="ArrayOfArticuloColorCatalogoWebData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArticuloColorCatalogoWebData" nillable="true" type="tns:ArticuloColorCatalogoWebData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticuloColorCatalogoWebData" nillable="true" type="tns:ArrayOfArticuloColorCatalogoWebData" />
+  <xs:complexType name="ArticuloColorCatalogoWebData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q3:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ColorReferencial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ColoresTrama" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ColoresUrdimbre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaPublicacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Nro" type="xs:int" />
+          <xs:element minOccurs="0" name="UrlImagen" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ArticuloColorCatalogoWebData" nillable="true" type="tns:ArticuloColorCatalogoWebData" />
+  <xs:complexType name="ArticuloWebData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q4:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AcronimoCategoria" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ancho" type="xs:int" />
+          <xs:element minOccurs="0" name="ArticuloCategoria_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Borde" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Categoria" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fleco" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Largo" type="xs:int" />
+          <xs:element minOccurs="0" name="Mezcla" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nro" type="xs:int" />
+          <xs:element minOccurs="0" name="Pelo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Peso" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TipoFleco" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ArticuloWebData" nillable="true" type="tns:ArticuloWebData" />
+  <xs:complexType name="ArrayOfArticuloColorWebData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArticuloColorWebData" nillable="true" type="tns:ArticuloColorWebData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticuloColorWebData" nillable="true" type="tns:ArrayOfArticuloColorWebData" />
+  <xs:complexType name="ArticuloColorWebData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q5:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Articulo_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="ColorReferencial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ColoresTrama" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ColoresTramaConLeyenda" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ColoresUrdimbre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ColoresUrdimbreConLeyenda" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaPublicacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Imagen" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Nro" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ArticuloColorWebData" nillable="true" type="tns:ArticuloColorWebData" />
+  <xs:complexType name="InfoInicioSesionUsuarioWeb">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PuedeVerInventario" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoInicioSesionUsuarioWeb" nillable="true" type="tns:InfoInicioSesionUsuarioWeb" />
+</xs:schema>

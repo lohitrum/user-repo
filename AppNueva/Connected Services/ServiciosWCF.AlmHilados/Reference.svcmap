@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b95c5b7b-39aa-4f3a-a9c5-dcb0e40ca9db" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://alpaca-studio.illary.com/nubian/AlmacenesHilados/metadata" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="2fe6aeda-49dc-40d2-844f-8dac16c87364" SourceId="1" SourceUrl="net.tcp://alpaca-studio.illary.com/nubian/AlmacenesHilados/metadata" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="ed74ec80-bb75-4af7-a8df-08584a801417" SourceId="1" SourceUrl="net.tcp://alpaca-studio.illary.com/nubian/AlmacenesHilados/metadata" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="dfd49f52-26ed-449f-b6b0-1a5ae0e7ed52" SourceId="1" SourceUrl="net.tcp://alpaca-studio.illary.com/nubian/AlmacenesHilados/metadata" />
+    <MetadataFile FileName="Nubian.Servidor.Contracts.xsd" MetadataType="Schema" ID="489b753f-4209-4f5a-ba1b-f1b6f4672d39" SourceId="1" SourceUrl="net.tcp://alpaca-studio.illary.com/nubian/AlmacenesHilados/metadata" />
+    <MetadataFile FileName="Nubian.Servicios.Genericos.xsd" MetadataType="Schema" ID="4434de09-7c63-4f94-bfa1-4d7b26d040eb" SourceId="1" SourceUrl="net.tcp://alpaca-studio.illary.com/nubian/AlmacenesHilados/metadata" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="bb2a7b61-1716-427d-84af-21c1019ba22e" SourceId="1" SourceUrl="net.tcp://alpaca-studio.illary.com/nubian/AlmacenesHilados/metadata" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

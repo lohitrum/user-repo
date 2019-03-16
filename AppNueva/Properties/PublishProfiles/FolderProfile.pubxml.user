@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_NewBackgroundProfile>False</_NewBackgroundProfile>
+    <_PublishTargetUrl>C:\compartido\Web-compilado</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AppNueva.dll">
+      <publishTime>03/16/2019 11:50:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>12/13/2016 03:10:32</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.AlmHilados/AppNueva.ServiciosWCF.AlmHilados.AlmHiladoCoincidenciasBusquedaMovimientosData.datasource">
+      <publishTime>03/16/2019 11:16:38</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.AlmHilados/AppNueva.ServiciosWCF.AlmHilados.AlmHiladoData.datasource">
+      <publishTime>03/16/2019 11:16:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.AlmHilados/AppNueva.ServiciosWCF.AlmHilados.AlmHiladoGrupoData.datasource">
+      <publishTime>03/16/2019 11:16:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.AlmHilados/AppNueva.ServiciosWCF.AlmHilados.AlmHiladoInventarioGrupoData.datasource">
+      <publishTime>03/16/2019 11:16:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.AlmHilados/AppNueva.ServiciosWCF.AlmHilados.AlmHiladoInventarioItemData.datasource">
+      <publishTime>03/16/2019 11:16:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.AlmHilados/AppNueva.ServiciosWCF.AlmHilados.AlmHiladoInventarioItem_ResultadoSalidaRapidaData.datasource">
+      <publishTime>03/16/2019 11:16:38</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.AlmHilados/AppNueva.ServiciosWCF.AlmHilados.AlmHiladoInventarioPartidaConStockData.datasource">
+      <publishTime>03/16/2019 11:16:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.AlmHilados/AppNueva.ServiciosWCF.AlmHilados.AlmHiladoMovimientoData.datasource">
+      <publishTime>03/16/2019 11:16:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.AlmHilados/AppNueva.ServiciosWCF.AlmHilados.AlmHiladoMovimientoInsertedValue.datasource">
+      <publishTime>03/16/2019 11:16:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.AlmHilados/AppNueva.ServiciosWCF.AlmHilados.AlmHiladoMovimientoItemData.datasource">
+      <publishTime>03/16/2019 11:16:38</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.AlmHilados/AppNueva.ServiciosWCF.AlmHilados.ColorEnInventarioData.datasource">
+      <publishTime>03/16/2019 11:16:38</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.AlmHilados/AppNueva.ServiciosWCF.AlmHilados.EntidadIdentificable.datasource">
+      <publishTime>03/16/2019 11:16:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.AlmHilados/AppNueva.ServiciosWCF.AlmHilados.PartidaHiladoData.datasource">
+      <publishTime>03/16/2019 11:16:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.Catalogo/AppNueva.ServiciosWCF.Catalogo.ArticuloCatalogoWebData.datasource">
+      <publishTime>03/14/2019 13:04:46</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.Catalogo/AppNueva.ServiciosWCF.Catalogo.ArticuloCategoriaCatalogoWebData.datasource">
+      <publishTime>03/14/2019 13:04:46</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.Catalogo/AppNueva.ServiciosWCF.Catalogo.ArticuloColorCatalogoWebData.datasource">
+      <publishTime>03/14/2019 13:04:47</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.Catalogo/AppNueva.ServiciosWCF.Catalogo.InfoInicioSesionUsuarioWeb.datasource">
+      <publishTime>03/14/2019 13:04:47</publishTime>
+    </File>
+    <File Include="Connected Services/ServiciosWCF.Mensajes/AppNueva.ServiciosWCF.Mensajes.MensajeWebData.datasource">
+      <publishTime>03/14/2019 13:05:30</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>03/15/2019 11:46:15</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/14/2019 12:48:08</publishTime>
+    </File>
+    <File Include="Paginas/Hilados.aspx">
+      <publishTime>03/16/2019 11:09:34</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>03/16/2019 11:51:25</publishTime>
+    </File>
+    <File Include="resource/contactform/readme.txt">
+      <publishTime>03/14/2019 14:03:18</publishTime>
+    </File>
+    <File Include="resource/css/animate.css">
+      <publishTime>03/14/2019 14:03:18</publishTime>
+    </File>
+    <File Include="resource/css/bootstrap.min.css">
+      <publishTime>03/14/2019 14:03:18</publishTime>
+    </File>
+    <File Include="resource/css/font-awesome.min.css">
+      <publishTime>03/14/2019 14:03:18</publishTime>
+    </File>
+    <File Include="resource/css/style.css">
+      <publishTime>03/14/2019 14:03:18</publishTime>
+    </File>
+    <File Include="resource/fonts/fontawesome-webfont.eot">
+      <publishTime>03/14/2019 14:03:18</publishTime>
+    </File>
+    <File Include="resource/fonts/fontawesome-webfont.svg">
+      <publishTime>03/14/2019 14:03:18</publishTime>
+    </File>
+    <File Include="resource/fonts/fontawesome-webfont.ttf">
+      <publishTime>03/14/2019 14:03:18</publishTime>
+    </File>
+    <File Include="resource/fonts/fontawesome-webfont.woff">
+      <publishTime>03/14/2019 14:03:18</publishTime>
+    </File>
+    <File Include="resource/fonts/fontawesome-webfont.woff2">
+      <publishTime>03/14/2019 14:03:18</publishTime>
+    </File>
+    <File Include="resource/fonts/FontAwesome.otf">
+      <publishTime>03/14/2019 14:03:18</publishTime>
+    </File>
+    <File Include="resource/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>03/14/2019 14:03:18</publishTime>
+    </File>
+    <File Include="resource/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/banner1-re.jpg">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/banner1.jpg">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/banner2.jpg">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/banner3.jpg">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/banner4.jpg">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/check.png">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/disconect.png">
+      <publishTime>03/16/2019 10:22:00</publishTime>
+    </File>
+    <File Include="resource/img/diseños.jpg">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/flat-gear.gif">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/illary.png">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/incatops.jpg">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/loader.gif">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/loader2.gif">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/michell.jpg">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/pashmina.png">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/warning.png">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/img/zoom1.png">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/index.html">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/js/bootstrap.min.js">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/js/custom.js">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/js/jquery-1.7.1.min.js">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/js/jquery.easing.min.js">
+      <publishTime>03/14/2019 14:03:19</publishTime>
+    </File>
+    <File Include="resource/js/jquery.min.js">
+      <publishTime>03/14/2019 14:03:20</publishTime>
+    </File>
+    <File Include="resource/js/vanilla.idle.min.js">
+      <publishTime>03/14/2019 14:03:20</publishTime>
+    </File>
+    <File Include="resource/js/wow.js">
+      <publishTime>03/14/2019 14:03:20</publishTime>
+    </File>
+    <File Include="resource/scripts/productos.js">
+      <publishTime>03/15/2019 14:37:51</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/16/2019 11:51:24</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

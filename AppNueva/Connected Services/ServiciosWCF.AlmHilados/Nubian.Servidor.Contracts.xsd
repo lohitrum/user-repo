@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" />
+  <xs:complexType name="ArrayOfAlmHiladoData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlmHiladoData" nillable="true" type="tns:AlmHiladoData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlmHiladoData" nillable="true" type="tns:ArrayOfAlmHiladoData" />
+  <xs:complexType name="AlmHiladoData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q1:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlmHiladoData" nillable="true" type="tns:AlmHiladoData" />
+  <xs:complexType name="ArrayOfColorEnInventarioData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ColorEnInventarioData" nillable="true" type="tns:ColorEnInventarioData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfColorEnInventarioData" nillable="true" type="tns:ArrayOfColorEnInventarioData" />
+  <xs:complexType name="ColorEnInventarioData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoColor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Composicion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MuestraColor" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TextoBlanco" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ColorEnInventarioData" nillable="true" type="tns:ColorEnInventarioData" />
+  <xs:complexType name="ArrayOfAlmHiladoInventarioGrupoData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlmHiladoInventarioGrupoData" nillable="true" type="tns:AlmHiladoInventarioGrupoData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlmHiladoInventarioGrupoData" nillable="true" type="tns:ArrayOfAlmHiladoInventarioGrupoData" />
+  <xs:complexType name="AlmHiladoInventarioGrupoData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q2:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Color" nillable="true" type="tns:ColorData" />
+          <xs:element minOccurs="0" name="Composicion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Mezcla_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="NombreComercial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PesoNeto" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Proveedor_Acronimo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Proveedor_RazonSocial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlmHiladoInventarioGrupoData" nillable="true" type="tns:AlmHiladoInventarioGrupoData" />
+  <xs:complexType name="ColorData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q3:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Muestra" type="xs:int" />
+          <xs:element minOccurs="0" name="TextoBlanco" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ColorData" nillable="true" type="tns:ColorData" />
+  <xs:complexType name="ArrayOfAlmHiladoInventarioItemData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlmHiladoInventarioItemData" nillable="true" type="tns:AlmHiladoInventarioItemData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlmHiladoInventarioItemData" nillable="true" type="tns:ArrayOfAlmHiladoInventarioItemData" />
+  <xs:complexType name="AlmHiladoInventarioItemData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q4:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Almacen_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Grupo_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Grupo_Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NroConos" type="xs:int" />
+          <xs:element minOccurs="0" name="Partida_Codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Partida_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="PesoNeto" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Ubicacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlmHiladoInventarioItemData" nillable="true" type="tns:AlmHiladoInventarioItemData" />
+  <xs:complexType name="ArrayOfAlmHiladoInventarioPartidaConStockData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlmHiladoInventarioPartidaConStockData" nillable="true" type="tns:AlmHiladoInventarioPartidaConStockData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlmHiladoInventarioPartidaConStockData" nillable="true" type="tns:ArrayOfAlmHiladoInventarioPartidaConStockData" />
+  <xs:complexType name="AlmHiladoInventarioPartidaConStockData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q5:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Almacen_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Grupo_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Grupo_Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NroConos" type="xs:int" />
+          <xs:element minOccurs="0" name="Partida" nillable="true" type="tns:PartidaHiladoData" />
+          <xs:element minOccurs="0" name="PesoNeto" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Ubicacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlmHiladoInventarioPartidaConStockData" nillable="true" type="tns:AlmHiladoInventarioPartidaConStockData" />
+  <xs:complexType name="PartidaHiladoData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q6:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Color" nillable="true" type="tns:ColorData" />
+          <xs:element minOccurs="0" name="Color_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Mezcla_Composicion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Mezcla_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Mezcla_NombreComercial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Origen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PartidaHiladoData" nillable="true" type="tns:PartidaHiladoData" />
+  <xs:complexType name="AlmHiladoGrupoData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q7:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PorDefecto" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlmHiladoGrupoData" nillable="true" type="tns:AlmHiladoGrupoData" />
+  <xs:complexType name="ArrayOfAlmHiladoGrupoData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlmHiladoGrupoData" nillable="true" type="tns:AlmHiladoGrupoData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlmHiladoGrupoData" nillable="true" type="tns:ArrayOfAlmHiladoGrupoData" />
+  <xs:complexType name="AlmHiladoMovimientoData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q8:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Almacen_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="DocumentoReferencia_Fecha" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DocumentoReferencia_Nro" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentoReferencia_Procedencia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentoReferencia_Tipo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EsIngreso" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Motivo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Notas" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nro" type="xs:int" />
+          <xs:element minOccurs="0" name="Referencia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Registrado" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlmHiladoMovimientoData" nillable="true" type="tns:AlmHiladoMovimientoData" />
+  <xs:complexType name="AlmHiladoMovimientoInsertedValue">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q9:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Nro" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlmHiladoMovimientoInsertedValue" nillable="true" type="tns:AlmHiladoMovimientoInsertedValue" />
+  <xs:complexType name="ArrayOfAlmHiladoMovimientoData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlmHiladoMovimientoData" nillable="true" type="tns:AlmHiladoMovimientoData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlmHiladoMovimientoData" nillable="true" type="tns:ArrayOfAlmHiladoMovimientoData" />
+  <xs:complexType name="ArrayOfAlmHiladoMovimientoInsertedValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlmHiladoMovimientoInsertedValue" nillable="true" type="tns:AlmHiladoMovimientoInsertedValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlmHiladoMovimientoInsertedValue" nillable="true" type="tns:ArrayOfAlmHiladoMovimientoInsertedValue" />
+  <xs:complexType name="ArrayOfAlmHiladoCoincidenciasBusquedaMovimientosData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlmHiladoCoincidenciasBusquedaMovimientosData" nillable="true" type="tns:AlmHiladoCoincidenciasBusquedaMovimientosData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlmHiladoCoincidenciasBusquedaMovimientosData" nillable="true" type="tns:ArrayOfAlmHiladoCoincidenciasBusquedaMovimientosData" />
+  <xs:complexType name="AlmHiladoCoincidenciasBusquedaMovimientosData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NroCoincidencias" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlmHiladoCoincidenciasBusquedaMovimientosData" nillable="true" type="tns:AlmHiladoCoincidenciasBusquedaMovimientosData" />
+  <xs:complexType name="AlmHiladoInventarioItem_SalidaRapidaData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Almacen_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Grupo_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Partida_Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlmHiladoInventarioItem_SalidaRapidaData" nillable="true" type="tns:AlmHiladoInventarioItem_SalidaRapidaData" />
+  <xs:complexType name="AlmHiladoInventarioItem_ResultadoSalidaRapidaData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroConos" type="xs:int" />
+      <xs:element minOccurs="0" name="Partida" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PesoNeto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Ubicacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlmHiladoInventarioItem_ResultadoSalidaRapidaData" nillable="true" type="tns:AlmHiladoInventarioItem_ResultadoSalidaRapidaData" />
+  <xs:complexType name="AlmHiladoMovimientoItemData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" base="q10:EntidadIdentificable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Color" nillable="true" type="tns:ColorData" />
+          <xs:element minOccurs="0" name="Grupo_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Grupo_Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Mezcla" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Movimiento_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="NroConos" type="xs:int" />
+          <xs:element minOccurs="0" name="Origen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Partida_Id" type="xs:int" />
+          <xs:element minOccurs="0" name="PesoNeto" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ubicacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlmHiladoMovimientoItemData" nillable="true" type="tns:AlmHiladoMovimientoItemData" />
+  <xs:complexType name="ArrayOfAlmHiladoMovimientoItemData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlmHiladoMovimientoItemData" nillable="true" type="tns:AlmHiladoMovimientoItemData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlmHiladoMovimientoItemData" nillable="true" type="tns:ArrayOfAlmHiladoMovimientoItemData" />
+  <xs:complexType name="ArrayOfPartidaHiladoData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PartidaHiladoData" nillable="true" type="tns:PartidaHiladoData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPartidaHiladoData" nillable="true" type="tns:ArrayOfPartidaHiladoData" />
+</xs:schema>

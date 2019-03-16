@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="Obtener_Almacenes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_AlmacenesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Obtener_AlmacenesResult" nillable="true" type="q1:ArrayOfAlmHiladoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_AlmHilado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorInsertar" nillable="true" type="q2:AlmHiladoData" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorActualizar" nillable="true" type="q3:AlmHiladoData" />
+        <xs:element minOccurs="0" name="IdPorEliminar" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_AlmHiladoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" minOccurs="0" name="Persistir_AlmHiladoResult" nillable="true" type="q4:EntidadIdentificable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_AlmHilados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorInsertar" nillable="true" type="q5:ArrayOfAlmHiladoData" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorActualizar" nillable="true" type="q6:ArrayOfAlmHiladoData" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IdsPorEliminar" nillable="true" type="q7:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_AlmHiladosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" minOccurs="0" name="Persistir_AlmHiladosResult" nillable="true" type="q8:ArrayOfEntidadIdentificable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_MezclasInventario">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_MezclasInventarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Obtener_MezclasInventarioResult" nillable="true" type="q9:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_TitulosInventario">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_TitulosInventarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Obtener_TitulosInventarioResult" nillable="true" type="q10:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_ColoresInventario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="texto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="almacen_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_ColoresInventarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Buscar_ColoresInventarioResult" nillable="true" type="q11:ArrayOfColorEnInventarioData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_Inventario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Texto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Almacen_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_InventarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Buscar_InventarioResult" nillable="true" type="q12:ArrayOfAlmHiladoInventarioGrupoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Inventario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Almacen_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_InventarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Obtener_InventarioResult" nillable="true" type="q13:ArrayOfAlmHiladoInventarioGrupoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Detalle_GrupoInventario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Almacen_Id" type="xs:int" />
+        <xs:element minOccurs="0" name="Mezcla_Id" type="xs:int" />
+        <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Color_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Detalle_GrupoInventarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Obtener_Detalle_GrupoInventarioResult" nillable="true" type="q14:ArrayOfAlmHiladoInventarioItemData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_InventarioPorPartidaHilado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Almacen_Id" type="xs:int" />
+        <xs:element minOccurs="0" name="PartidasSoloEnInventario" type="xs:boolean" />
+        <xs:element minOccurs="0" name="CodigoPartida" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_InventarioPorPartidaHiladoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Buscar_InventarioPorPartidaHiladoResult" nillable="true" type="q15:ArrayOfAlmHiladoInventarioPartidaConStockData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_Detalle_GrupoInventario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorActualizar" nillable="true" type="q16:ArrayOfAlmHiladoInventarioItemData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_Detalle_GrupoInventarioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_AlmHiladoGrupo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorInsertar" nillable="true" type="q17:AlmHiladoGrupoData" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorActualizar" nillable="true" type="q18:AlmHiladoGrupoData" />
+        <xs:element minOccurs="0" name="IdPorEliminar" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_AlmHiladoGrupoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" minOccurs="0" name="Persistir_AlmHiladoGrupoResult" nillable="true" type="q19:EntidadIdentificable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_AlmHiladoGrupos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorInsertar" nillable="true" type="q20:ArrayOfAlmHiladoGrupoData" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorActualizar" nillable="true" type="q21:ArrayOfAlmHiladoGrupoData" />
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IdsPorEliminar" nillable="true" type="q22:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_AlmHiladoGruposResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" minOccurs="0" name="Persistir_AlmHiladoGruposResult" nillable="true" type="q23:ArrayOfEntidadIdentificable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_GruposActivos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_GruposActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Obtener_GruposActivosResult" nillable="true" type="q24:ArrayOfAlmHiladoGrupoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_GrupoPorDefecto">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_GrupoPorDefectoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Obtener_GrupoPorDefectoResult" nillable="true" type="q25:AlmHiladoGrupoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_GruposActivosPorNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_GruposActivosPorNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Buscar_GruposActivosPorNombreResult" nillable="true" type="q26:ArrayOfAlmHiladoGrupoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_GruposInactivosPorNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_GruposInactivosPorNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Buscar_GruposInactivosPorNombreResult" nillable="true" type="q27:ArrayOfAlmHiladoGrupoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_AlmHiladoMovimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorInsertar" nillable="true" type="q28:AlmHiladoMovimientoData" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorActualizar" nillable="true" type="q29:AlmHiladoMovimientoData" />
+        <xs:element minOccurs="0" name="IdPorEliminar" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_AlmHiladoMovimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Persistir_AlmHiladoMovimientoResult" nillable="true" type="q30:AlmHiladoMovimientoInsertedValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_AlmHiladoMovimientos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorInsertar" nillable="true" type="q31:ArrayOfAlmHiladoMovimientoData" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorActualizar" nillable="true" type="q32:ArrayOfAlmHiladoMovimientoData" />
+        <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IdsPorEliminar" nillable="true" type="q33:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_AlmHiladoMovimientosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Persistir_AlmHiladoMovimientosResult" nillable="true" type="q34:ArrayOfAlmHiladoMovimientoInsertedValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_NroMovimientosEnMes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Almacen_Id" type="xs:int" />
+        <xs:element minOccurs="0" name="NroMes" type="xs:int" />
+        <xs:element minOccurs="0" name="año" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_NroMovimientosEnMesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Obtener_NroMovimientosEnMesResult" nillable="true" type="q35:ArrayOfAlmHiladoCoincidenciasBusquedaMovimientosData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_MovimientosPorDiasEnMes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Almacen_Id" type="xs:int" />
+        <xs:element xmlns:q36="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DiasCoincidentes" nillable="true" type="q36:ArrayOfint" />
+        <xs:element minOccurs="0" name="NroMes" type="xs:int" />
+        <xs:element minOccurs="0" name="NroAño" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_MovimientosPorDiasEnMesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Obtener_MovimientosPorDiasEnMesResult" nillable="true" type="q37:ArrayOfAlmHiladoMovimientoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_MovimientosSinRegistrar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Almacen_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_MovimientosSinRegistrarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Obtener_MovimientosSinRegistrarResult" nillable="true" type="q38:ArrayOfAlmHiladoMovimientoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_Movimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="texto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Almacen_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_MovimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Buscar_MovimientoResult" nillable="true" type="q39:ArrayOfAlmHiladoMovimientoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Nuevo_Movimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Almacen_Id" type="xs:int" />
+        <xs:element minOccurs="0" name="EsIngreso" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Nuevo_MovimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Nuevo_MovimientoResult" nillable="true" type="q40:AlmHiladoMovimientoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Registrar_Movimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Registrar_MovimientoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Registrar_MovimientoSalidaRapida">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="hilado" nillable="true" type="q41:AlmHiladoInventarioItem_SalidaRapidaData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Registrar_MovimientoSalidaRapidaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Registrar_MovimientoSalidaRapidaResult" nillable="true" type="q42:AlmHiladoInventarioItem_ResultadoSalidaRapidaData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_Item_Movimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorInsertar" nillable="true" type="q43:AlmHiladoMovimientoItemData" />
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorActualizar" nillable="true" type="q44:AlmHiladoMovimientoItemData" />
+        <xs:element minOccurs="0" name="IdPorEliminar" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_Item_MovimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" minOccurs="0" name="Persistir_Item_MovimientoResult" nillable="true" type="q45:EntidadIdentificable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_Items_Movimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorInsertar" nillable="true" type="q46:ArrayOfAlmHiladoMovimientoItemData" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorActualizar" nillable="true" type="q47:ArrayOfAlmHiladoMovimientoItemData" />
+        <xs:element xmlns:q48="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IdsPorEliminar" nillable="true" type="q48:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_Items_MovimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" minOccurs="0" name="Persistir_Items_MovimientoResult" nillable="true" type="q49:ArrayOfEntidadIdentificable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Detalles_MovimientoPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_Movimiento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Detalles_MovimientoPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Obtener_Detalles_MovimientoPorIdResult" nillable="true" type="q50:ArrayOfAlmHiladoMovimientoItemData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_PartidaHilado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorInsertar" nillable="true" type="q51:PartidaHiladoData" />
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorActualizar" nillable="true" type="q52:PartidaHiladoData" />
+        <xs:element minOccurs="0" name="IdPorEliminar" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_PartidaHiladoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" minOccurs="0" name="Persistir_PartidaHiladoResult" nillable="true" type="q53:EntidadIdentificable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_PartidasHilados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorInsertar" nillable="true" type="q54:ArrayOfPartidaHiladoData" />
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="PorActualizar" nillable="true" type="q55:ArrayOfPartidaHiladoData" />
+        <xs:element xmlns:q56="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IdsPorEliminar" nillable="true" type="q56:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persistir_PartidasHiladosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Nubian.Servicios.Genericos" minOccurs="0" name="Persistir_PartidasHiladosResult" nillable="true" type="q57:ArrayOfEntidadIdentificable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_PartidasHiladosPorCodigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_PartidasHiladosPorCodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Buscar_PartidasHiladosPorCodigoResult" nillable="true" type="q58:ArrayOfPartidaHiladoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_PartidaHilado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Texto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Buscar_PartidaHiladoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Nubian.Servidor.Contracts" minOccurs="0" name="Buscar_PartidaHiladoResult" nillable="true" type="q59:ArrayOfPartidaHiladoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
